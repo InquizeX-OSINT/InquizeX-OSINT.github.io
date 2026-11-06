@@ -2,12 +2,19 @@
 // InquizeX OSINT
 // ==========================================================
 
-const CHANNEL_ID = "UCuyLmOJb7PVCvx8zbRT9_GQ";
-const UPLOADS_ID = "UU" + CHANNEL_ID.slice(2); // channel's uploads playlist
+// Live streams. To change a stream, swap the video ID (the part after "watch?v=").
+const STREAMS = {
+  ukraine:    { id: "mTEqaZj2aho", label: "FEED // UKRAINE" },
+  middleeast: { id: "fn_ZWTr0Tb8", label: "FEED // MIDDLE EAST" },
+};
 
-const SOURCES = {
-  live: `https://www.youtube.com/embed/live_stream?channel=${CHANNEL_ID}`,
-  uploads: `https://www.youtube.com/embed/videoseries?list=${UPLOADS_ID}`,
+// Recent uploads = the channel's uploads playlist (channel ID with "UC" swapped for "UU").
+const CHANNEL_ID = "UCuyLmOJb7PVCvx8zbRT9_GQ";
+const UPLOADS = {
+  embed: `https://www.youtube.com/embed/videoseries?list=UU${CHANNEL_ID.slice(2)}`,
+  link: "https://www.youtube.com/@Inquizex/videos",
+  label: "FEED // RECENT UPLOADS",
+  title: "InquizeX OSINT recent uploads",
 };
 
 // ---------- Nav: background on scroll + mobile menu ----------
@@ -37,7 +44,16 @@ document.querySelectorAll(".tab").forEach(tab => {
       t.classList.toggle("active", t === tab);
       t.setAttribute("aria-selected", String(t === tab));
     });
-    player.src = SOURCES[tab.dataset.src];
+    const s = tab.dataset.src === "uploads" ? UPLOADS : {
+      ...STREAMS[tab.dataset.src],
+      embed: `https://www.youtube.com/embed/${STREAMS[tab.dataset.src].id}`,
+      link: `https://www.youtube.com/watch?v=${STREAMS[tab.dataset.src].id}`,
+      title: `InquizeX OSINT live stream: ${tab.textContent.replace("Live now:", "").trim()}`,
+    };
+    player.src = s.embed;
+    player.title = s.title;
+    document.getElementById("playerLabel").textContent = s.label;
+    document.getElementById("playerLink").href = s.link;
   });
 });
 
