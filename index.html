@@ -1,180 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InquizeX OSINT</title>
+  <meta name="description" content="InquizeX OSINT — real-time updates from conflict zones around the world. Live camera feeds, news coverage and open-source intelligence.">
+  <meta name="theme-color" content="#0a0a0a">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Social share preview -->
+  <meta property="og:title" content="InquizeX OSINT">
+  <meta property="og:description" content="Live camera feeds and open-source intelligence from conflict zones around the world.">
+  <meta property="og:image" content="assets/cover.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <title>InquizeX OSINT</title>
-
-    <meta name="description"
-        content="Open Source Intelligence, Cybersecurity, Live Conflict Monitoring and Intelligence Research.">
-
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap"
-        rel="stylesheet">
-
+  <link rel="icon" href="assets/logo.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Animated Background -->
-    <div id="particles"></div>
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="InquizeX OSINT home">
+      <img src="assets/logo.webp" alt="" class="brand-logo">
+      <span class="brand-name">INQUIZEX<b>OSINT</b></span>
+    </a>
 
-    <!-- Navigation -->
+    <nav class="nav-links" id="navLinks">
+      <a href="#live">Live</a>
+      <a href="#about">About</a>
+      <a href="#method">Method</a>
+      <a href="#connect">Connect</a>
+      <a class="btn btn-live btn-sm" href="https://www.youtube.com/@Inquizex/live" target="_blank" rel="noopener">
+        <span class="dot"></span> Watch Live
+      </a>
+    </nav>
 
-    <header>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span>
+    </button>
+  </header>
 
-        <nav class="navbar">
+  <main id="top">
 
-            <div class="logo">
-
-                INQUIZEX<span> OSINT</span>
-
-            </div>
-
-            <ul>
-
-                <li><a href="#">Home</a></li>
-
-                <li><a href="#">Videos</a></li>
-
-                <li><a href="#">Live</a></li>
-
-                <li><a href="#">Intelligence</a></li>
-
-                <li><a href="#">Tools</a></li>
-
-                <li><a href="#">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <!-- Hero -->
-
+    <!-- ================= HERO ================= -->
     <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="dot"></span> Open-source Intelligence</p>
+        <h1>
+          Live from the<br>
+          world's <span class="outline">conflict</span><br>
+          zones.
+        </h1>
+        <p class="lead">
+          Real-time camera feeds, news coverage and verified open-source
+          intelligence — reliable, unbiased reporting from some of the most
+          challenging regions on Earth.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://www.youtube.com/@Inquizex/live" target="_blank" rel="noopener">
+            <span class="dot"></span> Watch the live feed
+          </a>
+          <a class="btn btn-ghost" href="https://www.youtube.com/@Inquizex?sub_confirmation=1" target="_blank" rel="noopener">
+            Subscribe on YouTube
+          </a>
+        </div>
+      </div>
 
-        <div class="hero-content">
-
-            <p class="tag">
-
-                OPEN SOURCE INTELLIGENCE
-
-            </p>
-
-            <h1>
-
-                Intelligence.<br>
-                Cybersecurity.<br>
-                Research.
-
-            </h1>
-
-            <p class="hero-text">
-
-                Welcome to InquizeX OSINT — a hub for open-source intelligence,
-                cybersecurity, and educational research. Explore publicly available
-                information, analysis, and tools while following live coverage of
-                global events.
-
-            </p>
-
-            <div class="buttons">
-
-                <a class="primary" href="https://www.youtube.com/@Inquizex" target="_blank">
-                    Watch on YouTube
-                </a>
-
-                <a class="secondary" href="#">
-                    Latest Intelligence
-                </a>
-
-            </div>
-
+      <div class="hero-visual reveal">
+        <!-- Logo tile composition, echoing the brand mark -->
+        <div class="tiles" aria-hidden="true">
+          <div class="tile t-cam">
+            <svg viewBox="0 0 64 64"><path d="M6 14l38 10 6 14-30-6-14-4zM44 24l12-2-4 10-2 6M18 31l-2 8h8l3-6M8 38v14M8 46h10l8-7"/></svg>
+          </div>
+          <div class="tile t-code">
+            <svg viewBox="0 0 64 64"><path d="M22 18L8 32l14 14M42 18l14 14-14 14M36 12l-8 40"/></svg>
+          </div>
+          <div class="tile t-key">
+            <svg viewBox="0 0 64 64"><circle cx="44" cy="32" r="9"/><path d="M35 32H8M14 32v6M20 32v5"/></svg>
+          </div>
+          <div class="tile t-chip">
+            <svg viewBox="0 0 64 64"><rect x="20" y="20" width="24" height="24" rx="2"/><rect x="27" y="27" width="10" height="10"/><path d="M26 20v-8M32 20v-8M38 20v-8M26 44v8M32 44v8M38 44v8M20 26h-8M20 32h-8M20 38h-8M44 26h8M44 32h8M44 38h8"/></svg>
+          </div>
         </div>
 
         <div class="terminal">
-
-<pre id="typing">
-> Booting...
-</pre>
-
+          <div class="terminal-bar"><i></i><i></i><i></i><span>inquizex://feed</span></div>
+          <pre id="typing" aria-live="off"></pre>
         </div>
-
+      </div>
     </section>
 
-    <!-- About -->
+    <!-- ================= TICKER ================= -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>LIVE CAMERA FEEDS</span><span>◆</span>
+        <span>BREAKING COVERAGE</span><span>◆</span>
+        <span>OPEN-SOURCE INTELLIGENCE</span><span>◆</span>
+        <span>GEOLOCATION</span><span>◆</span>
+        <span>VERIFIED REPORTING</span><span>◆</span>
+        <span>LIVE CAMERA FEEDS</span><span>◆</span>
+        <span>BREAKING COVERAGE</span><span>◆</span>
+        <span>OPEN-SOURCE INTELLIGENCE</span><span>◆</span>
+        <span>GEOLOCATION</span><span>◆</span>
+        <span>VERIFIED REPORTING</span><span>◆</span>
+      </div>
+    </div>
 
-    <section class="about">
+    <!-- ================= LIVE ================= -->
+    <section class="section" id="live">
+      <div class="section-head reveal">
+        <p class="kicker">01 / Broadcast</p>
+        <h2>On air</h2>
+        <p class="sub">If we're live right now, the stream plays below. Off air? Switch to recent uploads.</p>
+      </div>
 
-        <h2>About</h2>
+      <div class="player-wrap reveal">
+        <div class="tabs" role="tablist">
+          <button class="tab active" role="tab" aria-selected="true" data-src="live"><span class="dot"></span> Live now</button>
+          <button class="tab" role="tab" aria-selected="false" data-src="uploads">Recent uploads</button>
+        </div>
 
-        <p>
+        <div class="player">
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
+          <iframe id="player"
+            src="https://www.youtube.com/embed/live_stream?channel=UCuyLmOJb7PVCvx8zbRT9_GQ"
+            title="InquizeX OSINT live stream"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
 
-            InquizeX OSINT focuses on educational content related to open-source
-            intelligence, cybersecurity, research methodologies, and analysis of
-            publicly available information.
-
-        </p>
-
+        <div class="player-foot">
+          <span class="mono">CH // UCuyLmOJb7PVCvx8zbRT9_GQ</span>
+          <a href="https://www.youtube.com/@Inquizex/live" target="_blank" rel="noopener">Open on YouTube ↗</a>
+        </div>
+      </div>
     </section>
 
-    <!-- Featured -->
-
-    <section class="cards">
-
-        <div class="card">
-
-            <h3>📺 Videos</h3>
-
-            <p>
-                Educational cybersecurity and OSINT videos.
-            </p>
-
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="kicker">02 / About</p>
+          <h2>Your source for what's happening — as it happens.</h2>
+          <p>
+            InquizeX OSINT brings you real-time updates from conflict zones around the
+            world. Our channel features live camera feeds and news coverage to give you
+            accurate, up-to-date information on the latest developments.
+          </p>
+          <p>
+            Our team uses open-source intelligence to gather information, so viewers get
+            reliable and unbiased reporting — plus exclusive insights and on-the-ground
+            perspectives from some of the most challenging regions in the world.
+          </p>
+          <p class="sign">Stay informed with InquizeX OSINT.</p>
         </div>
 
-        <div class="card">
-
-            <h3>📡 Live Monitoring</h3>
-
-            <p>
-                Live streams covering publicly available information during significant global events.
-            </p>
-
+        <div class="features">
+          <article class="feature reveal">
+            <div class="ficon"><svg viewBox="0 0 64 64"><path d="M6 14l38 10 6 14-30-6-14-4zM44 24l12-2-4 10-2 6M18 31l-2 8h8l3-6M8 38v14M8 46h10l8-7"/></svg></div>
+            <h3>Live camera feeds</h3>
+            <p>Continuous streams from public cameras in and around active regions.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="ficon"><svg viewBox="0 0 64 64"><rect x="8" y="14" width="48" height="36" rx="4"/><path d="M16 24h20M16 32h32M16 40h26"/></svg></div>
+            <h3>News coverage</h3>
+            <p>Breaking developments summarised clearly, without the noise.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="ficon"><svg viewBox="0 0 64 64"><circle cx="28" cy="28" r="14"/><path d="M38 38l16 16M22 28h12M28 22v12"/></svg></div>
+            <h3>OSINT analysis</h3>
+            <p>Publicly available data, cross-checked before it reaches you.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="ficon"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><path d="M10 32h44M32 10c8 8 8 36 0 44M32 10c-8 8-8 36 0 44"/></svg></div>
+            <h3>Global perspective</h3>
+            <p>On-the-ground viewpoints from regions that are hard to reach.</p>
+          </article>
         </div>
-
-        <div class="card">
-
-            <h3>🛰 Intelligence Hub</h3>
-
-            <p>
-                Tools, resources, and research techniques for learning OSINT.
-            </p>
-
-        </div>
-
+      </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ================= METHOD ================= -->
+    <section class="section" id="method">
+      <div class="section-head reveal">
+        <p class="kicker">03 / Method</p>
+        <h2>How we work</h2>
+        <p class="sub">Every update goes through the same open-source process.</p>
+      </div>
 
-    <footer>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="num">01</span>
+          <h3>Collect</h3>
+          <p>Live feeds, public footage, satellite imagery and on-the-ground reports.</p>
+        </li>
+        <li class="step reveal">
+          <span class="num">02</span>
+          <h3>Locate</h3>
+          <p>Geolocate and time-stamp material to confirm where and when it happened.</p>
+        </li>
+        <li class="step reveal">
+          <span class="num">03</span>
+          <h3>Verify</h3>
+          <p>Cross-reference independent sources before anything goes on air.</p>
+        </li>
+        <li class="step reveal">
+          <span class="num">04</span>
+          <h3>Report</h3>
+          <p>Deliver clear, unbiased updates — live, as events develop.</p>
+        </li>
+      </ol>
+    </section>
 
-        © 2026 InquizeX OSINT
+    <!-- ================= CONNECT ================= -->
+    <section class="section" id="connect">
+      <div class="section-head reveal">
+        <p class="kicker">04 / Connect</p>
+        <h2>Join the community</h2>
+        <p class="sub">Follow along, get alerts when we go live, and talk with other viewers.</p>
+      </div>
 
-    </footer>
+      <div class="socials">
+        <a class="social reveal" href="https://www.youtube.com/@Inquizex" target="_blank" rel="noopener">
+          <span class="sicon"><svg viewBox="0 0 24 24"><path class="fill" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15.5v-7l6 3.5-6 3.5z"/></svg></span>
+          <span class="sname">YouTube</span>
+          <span class="shandle">/inquizex</span>
+        </a>
+        <a class="social reveal" href="https://www.facebook.com/inquizexx" target="_blank" rel="noopener">
+          <span class="sicon"><svg viewBox="0 0 24 24"><path class="fill" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg></span>
+          <span class="sname">Facebook</span>
+          <span class="shandle">/inquizexx</span>
+        </a>
+        <a class="social reveal" href="https://x.com/inquizex" target="_blank" rel="noopener">
+          <span class="sicon"><svg viewBox="0 0 24 24"><path class="fill" d="M18.2 2.3h3.4l-7.4 8.4 8.7 11.5h-6.8l-5.3-7-6.1 7H1.3l7.9-9L.9 2.3h7l4.8 6.4 5.5-6.4zm-1.2 17.9h1.9L7.1 4.2H5.1L17 20.2z"/></svg></span>
+          <span class="sname">X / Twitter</span>
+          <span class="shandle">@inquizex</span>
+        </a>
+        <a class="social reveal" href="https://discord.gg/kKzgwPVdnW" target="_blank" rel="noopener">
+          <span class="sicon"><svg viewBox="0 0 24 24"><path class="fill" d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a20 20 0 0 0 6 3l1.3-2.1c-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.9 19.9 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7zM8 15.3c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg></span>
+          <span class="sname">Discord</span>
+          <span class="shandle">kKzgwPVdnW</span>
+        </a>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+  </main>
 
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/logo.webp" alt="" class="brand-logo">
+      <div>
+        <strong>INQUIZEX <b>OSINT</b></strong>
+        <span>Open-source Intelligence</span>
+      </div>
+    </div>
+    <p class="disclaimer">
+      Coverage may include footage from active conflict zones. Viewer discretion is advised.
+      All information is gathered from publicly available sources.
+    </p>
+    <p class="copy">© <span id="year">2026</span> InquizeX OSINT</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
