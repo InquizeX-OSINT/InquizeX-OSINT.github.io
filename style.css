@@ -251,7 +251,7 @@ h2 {
 
 /* live player */
 .player-wrap { max-width: 1100px; }
-.tabs { display: inline-flex; gap: 6px; padding: 5px; border: 1px solid var(--line); border-radius: 14px; background: #000; margin-bottom: 20px; }
+.tabs { display: inline-flex; flex-wrap: wrap; gap: 6px; padding: 5px; border: 1px solid var(--line); border-radius: 14px; background: #000; margin-bottom: 20px; }
 .tab {
   display: inline-flex; align-items: center; gap: 8px;
   font: 600 .9rem Inter, sans-serif; color: var(--muted);
@@ -406,6 +406,8 @@ h2 {
   .sicon { width: 58px; height: 58px; }
   .cta .btn { width: 100%; justify-content: center; }
   .corner { display: none; }
+  .tabs { display: grid; width: 100%; }
+  .tab { justify-content: center; white-space: nowrap; }
 }
 
 @media (prefers-reduced-motion: reduce) {
